@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     post = Post.create(content: params[:content], checked: false)
     # レスポンスをJSONに変更
     # redirect_to action: :index
-    render json;{ post: post }
+    render json: { post: post }
   end
   def checked
     post = Post.find(params[:id])
